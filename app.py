@@ -33,7 +33,7 @@ if generate_story:
                 image_columns = st.columns(len(images))
                 for i, img in enumerate(images):
                     with image_columns[i]:
-                        st.image(img, use_column_width=True)
+                        st.image(img, width=None)
                 story = generate_story_from_images(images, style)
 
                 if "Error" in story or "failed" in story or "API KEY" in story:
